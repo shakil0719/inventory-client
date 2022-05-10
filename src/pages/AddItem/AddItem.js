@@ -24,7 +24,7 @@ const AddItem = () => {
     console.log(data.quantity);
     data.email = user.email;
     reset();
-    const url = `https://protected-badlands-97400.herokuapp.com/product`;
+    const url = `https://inventory-car-app.herokuapp.com/product`;
     fetch(url, {
       method: "POST",
       headers: {

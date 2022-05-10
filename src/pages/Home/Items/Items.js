@@ -10,7 +10,7 @@ const Items = () => {
   const [flag, setFlag] = useState(null);
   useEffect(() => {
     function fe() {
-      fetch("https://protected-badlands-97400.herokuapp.com/product")
+      fetch("https://inventory-car-app.herokuapp.com/product")
         .then((res) => res.json())
         .then((data) => {
           setProducts(data);

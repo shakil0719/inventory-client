@@ -11,13 +11,13 @@ const ProductUpdate = () => {
   const [product, setProduct] = useState({});
   const [products, setProducts] = useState([]);
   //   useEffect(() => {
-  //     fetch("https://protected-badlands-97400.herokuapp.com/product")
+  //     fetch("https://inventory-car-app.herokuapp.com/product")
   //       .then((res) => res.json())
   //       .then((data) => setProducts(data));
   //   }, []);
   const [flag, setFlag] = useState(null);
 
-  const url = `https://protected-badlands-97400.herokuapp.com/product/${id}`;
+  const url = `https://inventory-car-app.herokuapp.com/product/${id}`;
   useEffect(() => {
     function fe() {
       fetch(url)
@@ -31,7 +31,7 @@ const ProductUpdate = () => {
   }, [bool]);
   const handleReStock = (val) => {
     fetch(
-      `https://protected-badlands-97400.herokuapp.com/product/${id}?value=${val}`,
+      `https://inventory-car-app.herokuapp.com/product/${id}?value=${val}`,
       {
         method: "PUT",
         headers: {
@@ -49,7 +49,7 @@ const ProductUpdate = () => {
   const [value, setValue] = useState();
   const handleDelivered = (val) => {
     fetch(
-      `https://protected-badlands-97400.herokuapp.com/product/${id}?value=${val}`,
+      `https://inventory-car-app.herokuapp.com/product/${id}?value=${val}`,
       {
         method: "PUT",
         headers: {
