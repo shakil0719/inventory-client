@@ -1,0 +1,31 @@
+.font-style{
+    font-family: cursive;
+    color: goldenrod;
+    font-size: 24px;
+}
+.font-style-heading{
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+@media  only screen and (max-width:600px){
+    .font-style{
+        
+        font-size: 12px;
+    }
+    .font-style-heading{
+        
+        font-size: 16px;
+    }
+}
+@media  only screen and (max-width:320px){
+    .font-style{
+        
+        font-size: 10px;
+    }
+    .font-style-heading{
+        
+        font-size: 14px;
+        
+    }
+}
