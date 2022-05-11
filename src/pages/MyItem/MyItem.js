@@ -57,13 +57,15 @@ const MyItem = () => {
   //   })
 
   return (
-    <div className="pt-4">
+    <div className="pt-4 min-vh-100 ">
       {!flag && (
         <>
           <div className="con">
             <span>~ My Items ~</span>
           </div>
-          <Loading></Loading>
+          <div className="d-flex flex-column justify-content-center align-items-center">
+            <Loading></Loading>
+          </div>
         </>
       )}
       {flag && (
@@ -71,9 +73,23 @@ const MyItem = () => {
           <div className="bon">
             <span>~ My Items ~</span>
           </div>
-          {products?.map((product) => (
-            <Product key={product._id} product={product}></Product>
-          ))}
+          <div
+            style={{ minHeight: "300px" }}
+            className="d-flex flex-column justify-content-center align-items-center"
+          >
+            {products.length < 1 && (
+              <div className="d-flex flex-column justify-content-center align-items-center h-100">
+                <p className="b">
+                  <p className="p">No Items Found</p>
+                </p>
+                {/* <NotFound></NotFound> */}
+              </div>
+            )}
+            {products.length > 0 &&
+              products?.map((product) => (
+                <Product key={product._id} product={product}></Product>
+              ))}
+          </div>
         </>
       )}
     </div>
