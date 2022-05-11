@@ -22,7 +22,7 @@ const AddItem = () => {
   console.log(errors);
   const onSubmit = (data) => {
     console.log(data.quantity);
-    data.email = user.email;
+    data.gmail = user.email;
     reset();
     const url = `https://inventory-car-app.herokuapp.com/product`;
     fetch(url, {
